@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera — Public Property Monitoring System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="letterhead">
+  <div class="container">
+    <div class="brand">
+      <span class="seal">PP</span>
+      <span>Public Property Monitoring System
+        <small>Government Civic Reporting Portal</small>
+      </span>
+    </div>
+    <nav class="mainnav">
+      <a href="index.html">Home</a>
+      <a href="area.html">Area</a>
+      <a href="employee.html">Employee</a>
+      <a href="admin.html">Admin</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container section">
+  <div class="panel">
+    <div class="eyebrow">Step 1 of 2</div>
+    <h2>Capture a photo</h2>
+
+    <div id="cameraAlert" class="alert alert-error" style="display:none;"></div>
+
+    <div class="camera-frame" id="cameraFrame">
+      <video id="video" autoplay playsinline style="display:none;"></video>
+      <img id="capturedPreview" style="display:none;" alt="Captured photo">
+      <div class="placeholder" id="cameraPlaceholder">Camera preview will appear here.<br>Click "Start Camera" to begin.</div>
+    </div>
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <div class="camera-controls">
+      <button class="btn btn-outline" id="startBtn">Start Camera</button>
+      <button class="btn btn-primary" id="captureBtn" style="display:none;">Capture Photo</button>
+      <button class="btn btn-outline" id="retakeBtn" style="display:none;">Retake</button>
+      <button class="btn btn-brass" id="useBtn" style="display:none;">Use Photo</button>
+    </div>
+
+    <p class="small muted center" style="margin-top:18px;">
+      No camera access? <a href="upload.html">Go back and choose a photo instead</a>.
+    </p>
+  </div>
+</div>
+
+<footer class="sitefoot">
+  <div class="container">Public Property Monitoring System — a civic reporting demo built in phases.</div>
+</footer>
+
+<script src="js/store.js"></script>
+<script src="js/main.js"></script>
+<script src="js/camera.js"></script>
+</body>
+</html>
